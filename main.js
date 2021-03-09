@@ -8,9 +8,8 @@ function setup(){
         return response.json();
     })
     .then(json => {
-      console.log(json)
       json.data.map(data => {
-          console.log(data.images)
+          console.log(data.images.downsized.url)
       })
     })
 
