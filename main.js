@@ -14,7 +14,8 @@ function setup(){
     .then(json => {
         imgData = json.data;
         displayImgData = imgData.slice(0, imgLimit);
-        appendImg()
+        appendImg();
+        loadFooter();
     })
 
     .catch(err => console.log(err));
@@ -53,5 +54,5 @@ function back() {
 }
 
 function loadFooter() {
-    $("footer").html(`Copyright ©${thisYear} Truong Quang Tan| Made with 💚`);
+    $(".text-footer").append(`Copyright ©${thisYear} Truong Quang Tan| Made with 💚`);
 }
