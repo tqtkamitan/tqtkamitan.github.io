@@ -11,16 +11,29 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 
-  <title>Giphy Strendy</title>
+  <title>Giphy Trending</title>
 </head>
 
 <body>
-  <h1 class="text-center">Giphy Strendy</h1>
-  <div class="row display-img">
-
+  <div id="all-img">
+    <h1 class="text-center">Giphy Trending</h1>
+    <div class="row display-img">
+  
+    </div>
+  
+    <div class="center">
+      <button type="button" class="btn btn-primary" onclick="loadMoreImg()">Load More</button>
+    </div>
   </div>
 
-  <button type="button" class="btn btn-primary">Load More</button>
+  <div id="show-img" class="d-none">
+    <div class="show-img center">
+  
+    </div>
+    <div class="center">
+      <button type="button" class="btn btn-primary" onclick="back()">Back</button>
+    </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
