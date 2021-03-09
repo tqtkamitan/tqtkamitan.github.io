@@ -20,7 +20,7 @@ function setup(){
 setup();
 
 function appendText(url) {
-    var txt1 = `<div class='col-3'><img src="${url}"></div>`; 
+    var txt1 = `<div class='col-3'><img class="giphy-img" src="${url}"></div>`; 
     console.log(txt1)
     console.log($(".row"))
     $(".row").append(txt1);
