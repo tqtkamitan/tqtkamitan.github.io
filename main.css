@@ -19,6 +19,11 @@
     max-height: 200px;
 }
 
+#all-img {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .text-footer {
     position: fixed;
     bottom: 0;
