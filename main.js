@@ -3,6 +3,7 @@ let imgLimit = 12;
 let giphyAPI = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}`;
 let displayImgData = [];
 let imgData = [];
+let thisYear = new Date().getFullYear();
 
 function setup(){
 
@@ -22,7 +23,7 @@ setup();
 
 function appendImg() {
     displayImgData.map(data => {
-        var txt1 = `<div class='col-lg-3 col-md-4 col-sm-6 col-6'><img class="giphy-img" onclick="showImg('${data.images.original.url}')" src="${data.images.downsized.url}"></div>`; 
+        var txt1 = `<div class='img-container col-lg-3 col-md-4 col-sm-6 col-6'><img class="giphy-img" onclick="showImg('${data.images.original.url}')" src="${data.images.downsized.url}"></div>`; 
 
         $(".display-img").append(txt1);
     })
@@ -49,4 +50,8 @@ function showImg(img) {
 function back() {
     $("#show-img").addClass("d-none");
     $("#all-img").removeClass("d-none");
+}
+
+function loadFooter() {
+    $("footer").html(`Copyright ©${thisYear} Truong Quang Tan| Made with 💚`);
 }
