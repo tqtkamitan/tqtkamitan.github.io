@@ -22,7 +22,6 @@ setup();
 
 function appendImg() {
     displayImgData.map(data => {
-        console.log(data.images)
         var txt1 = `<div class='col-lg-3 col-md-4 col-sm-6 col-6'><img class="giphy-img" onclick="showImg('${data.images.original.url}')" src="${data.images.downsized.url}"></div>`; 
 
         $(".display-img").append(txt1);
