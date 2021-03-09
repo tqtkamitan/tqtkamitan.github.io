@@ -10,9 +10,16 @@ function setup(){
     .then(json => {
       json.data.map(data => {
           console.log(data.images.downsized.url)
+          appendText(data.images.downsized.url)
       })
     })
 
     .catch(err => console.log(err));
 }
 setup();
+
+function appendText(url) {
+    var txt1 = "<div class='col-3'><img src='url'></div>"; 
+
+    $(".row").append(txt1);
+}
