@@ -24,7 +24,11 @@ setup();
 
 function appendImg() {
     displayImgData.map(data => {
-        var txt1 = `<div class='img-container col-lg-3 col-md-4 col-sm-6 col-6'><img class="giphy-img" onclick="showImg('${data.images.original.url}')" src="${data.images.downsized.url}"></div>`; 
+        var txt1 = `
+        <div class='img-container col-lg-3 col-md-4 col-sm-6 col-6'>
+            <img class="giphy-img" onclick="showImg('${data.images.original.url}')" src="${data.images.downsized.url}">
+            <p class="img-title">${data.title}</p>
+        </div>`; 
 
         $(".display-img").append(txt1);
     })
@@ -41,16 +45,10 @@ function loadMoreImg() {
 }
 
 function showImg(img) {
-    $("#show-img").removeClass("d-none");
-    $("#all-img").addClass("d-none");
     var txt1 = `<img src="${img}">`; 
 
     $(".show-img").html(txt1);
-}
-
-function back() {
-    $("#show-img").addClass("d-none");
-    $("#all-img").removeClass("d-none");
+    $('#imagemodal').modal('show');
 }
 
 function loadFooter() {

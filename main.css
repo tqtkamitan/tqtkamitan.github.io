@@ -32,3 +32,23 @@
     background-color: #f5f6ff;
     border-top: 1px solid #5e88fc;
 }
+
+.img-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-header {
+    border: none;
+    padding-bottom: 0px;
+}
+
+.modal-body {
+    background: transparent;
+}
+
+.modal-content {
+    background: transparent;
+    border: none;
+}
